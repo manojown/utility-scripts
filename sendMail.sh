@@ -11,7 +11,7 @@ else
        read -d '' environment <<"EOF"
 To:<TOMAIL>
 From:<FROMMAIL>
-Subject: Critical Alert On <name> Server
+Subject: Critical Alert On <NAME> Server
 
 Your server <NAME> ( <SERVER> ) uses reach <USED> and Available space is only  - <REMAINING>. ALERT (CRITICAL)
 
