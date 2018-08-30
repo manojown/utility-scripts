@@ -1,3 +1,4 @@
+#!/bin/bash
 REMAINING=$(df -h | grep "/var/lib/docker/overlay2/*"  | head -1 | awk '{print $4}' | rev | cut -c 2- | rev)
 USED=$(df -h | grep "/var/lib/docker/overlay2/*"  | head -1 | awk '{print $3}')
 echo  ${REMAINING}
@@ -21,5 +22,6 @@ EOF
  echo "$environment" > ./mail.txt
  sed -i "s/<REMAINING>/${REMAINING}GB/g" mail.txt
  sed -i "s/<USED>/${USED}/g" mail.txt
- df -h >> mail.txt | sendmail -t < mail.txt
+ df -h >> mail.txt 
+ /usr/sbin/sendmail -t < mail.txt
 fi
