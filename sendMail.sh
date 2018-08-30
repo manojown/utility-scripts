@@ -2,7 +2,7 @@
 REMAINING=$(df -h | grep "/var/lib/docker/overlay2/*"  | head -1 | awk '{print $4}' | rev | cut -c 2- | rev)
 USED=$(df -h | grep "/var/lib/docker/overlay2/*"  | head -1 | awk '{print $3}')
 echo  ${REMAINING}
-LIMIT=21
+LIMIT=<LIMIT>
 SERVER=$(hostname -I | awk '{print $1}')
 if [[ $REMAINING -gt $LIMIT ]]
 then
