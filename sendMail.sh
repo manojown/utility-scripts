@@ -13,7 +13,7 @@ To:<TOMAIL>
 From:<FROMMAIL>
 Subject:[CRITICAL] Alert <NAME> storage space. 
 
-Critical Alert <NAME> ( <SERVER> ). The storage space remaining is less than <REMAINING>
+Critical Alert <NAME> ( <SERVER> ). The storage space remaining is less than <REMAINING> .
 Quick Look
 -------------------
 Used - <USED>
